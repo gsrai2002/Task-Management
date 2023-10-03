@@ -1,0 +1,21 @@
+.task-item{
+    border-bottom: 2px solid #8EE4AF;
+}
+
+.task-info{
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    gap: 20px;
+}
+
+.task-name{
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.extra-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

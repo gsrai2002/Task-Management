@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    color: #EDF5E1;
+}
+
+.card{
+    background-image: linear-gradient(to right, #05386b, #006294, #008ca8, #00b5a6,#5cdb95);
+    max-width: 650px;
+    height: 500px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.heading{
+    text-align: center;
+}
+
+.form{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form input{
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #05386B;
+    border-radius: 3px;
+}
+
+button{
+    padding: 11px 20px;
+    background-color: #05386B;
+    color: #EDF5E1;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+button:hover{
+    background-color: #007BFF;
+}

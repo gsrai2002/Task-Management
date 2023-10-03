@@ -4,11 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="task.css">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/task.css">
+    <link rel="stylesheet" href="CSS/task-info.css">
+    <title>Task Management</title>
+    <link rel="icon" href="images/task.png" sizes="96x96" type="image/png">
 </head>
 <body>
+    <div class="card">
+        <h1 class="heading">Task Management</h1>
+
+        <form class="form">
+            <input type="text" class="task-title" placeholder="Task Title" required>
+            <input type="text" class="task-description" placeholder="Task Description" required>
+            <input type="date" class="task-due-date" required>
+            <button type="submit">Add Task</button>
+        </form>
+        <div class="task-list">
+            
+            <div class="task-item">
+                <div class="task-info">
+                    <h3 class="task-name">Task Name</h3>
+                    <p>Task Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam delectus nostrum molestias quisquam fugiat ipsum consectetur consequatur voluptatem quo illum!</p>
+                </div>
+                
+                <div class="extra-info">
+                    <p>Due Date: 2023-10-04</p>
     
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Completed</label> 
+                    </div>
+                    
+                    <div class="info-buttons">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="task-item">
+                <div class="task-info">
+                    <h3 class="task-name">Task Name </h3>
+                    <p>Task Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam delectus nostrum molestias quisquam fugiat ipsum consectetur consequatur voluptatem quo illum!</p>
+                </div>
+                
+                <div class="extra-info">
+                    <p>Due Date: 2023-10-04</p>
+    
+                    <div>
+                        <input type="checkbox">
+                        <label for="">Completed</label> 
+                    </div>
+                    
+                    <div class="info-buttons">
+                        <button>Edit</button>
+                        <button>Delete</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
     <script src="task.js"></script>
 </body>
 </html>
