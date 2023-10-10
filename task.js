@@ -45,8 +45,8 @@ function displayTasks(){
                 </div>
                 
                 <div class="info-buttons">
-                    <button>Edit</button>
-                    <button>Delete</button>
+                    <button onclick="editTask(${index})">Edit</button>
+                    <button onclick="deleteTask(${index})">Delete</button>
                 </div>
             </div>
         `;
@@ -59,6 +59,26 @@ function displayTasks(){
             tasks[index].completed = checkbox.checked;
         });
     });
+}
+
+function editTask(index){
+    const updatedTitle = prompt('Enter updated title:', tasks[index].title);
+    const updatedDescription = prompt('Enter updated description:', tasks[index].description);
+    const updatedDueDate = prompt('Enter updated due date:', tasks[index].dueDate);
+
+    if (updatedTitle !== null && updatedDescription !== null && updatedDueDate !== null) {
+        tasks[index].title = updatedTitle;
+        tasks[index].description = updatedDescription;
+        tasks[index].dueDate = updatedDueDate;
+
+        localStorage.setItem('taskInfo', JSON.stringify(tasks));
+        displayTasks();
+    }
+}
+
+function deleteTask(index){
+    tasks.splice(index,1);
+    displayTasks();
 }
 
 displayTasks();
