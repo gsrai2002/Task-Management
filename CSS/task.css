@@ -17,6 +17,7 @@ body{
     height: 500px;
     margin: 20px auto;
     padding: 20px;
+    border-radius: 5px;
 }
 
 .heading{
