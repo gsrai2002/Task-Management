@@ -78,6 +78,7 @@ function editTask(index){
 
 function deleteTask(index){
     tasks.splice(index,1);
+    localStorage.setItem('taskInfo', JSON.stringify(tasks));
     displayTasks();
 }
 

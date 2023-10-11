@@ -1,3 +1,15 @@
+.main-content{
+    display: grid;
+    grid-template-columns: 600px 350px;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.css-task-list{
+    border-right: 2px solid #8EE4AF;
+    padding-right: 10px;
+}
+
 .task-item{
     border-bottom: 2px solid #8EE4AF;
 }
@@ -11,11 +23,37 @@
 .task-name{
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
 }
 
 .extra-info{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.completed-tasks h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+.completed-task-item{
+    border-bottom: 2px solid #8EE4AF;
+}
+
+.completed-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.completed-info p{
+    white-space: nowrap;
+}
+
+.completed-delete{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
 }
