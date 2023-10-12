@@ -23,7 +23,7 @@
 .task-name{
     display: flex;
     align-items: center;
-    justify-content: center;
+    word-break: break-all; /* create a break at the exact place where text would otherwise overflow its container*/
 }
 
 .extra-info{
@@ -38,13 +38,18 @@
 }
 
 .completed-task-item{
-    border-bottom: 2px solid #8EE4AF;
+    border-bottom: 2px solid #05386B;
 }
 
 .completed-info{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
+}
+
+.completed-info h3{
+    word-break: break-all;
 }
 
 .completed-info p{
