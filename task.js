@@ -1,11 +1,15 @@
+// Task data array to store tasks
 let tasks = JSON.parse(localStorage.getItem('taskInfo')) || [];
 
+// Completed task data array
 let completedTasks = JSON.parse(localStorage.getItem('completedInfo')) || [];
 
+// DOM elements
 const taskForm = document.querySelector('.form');
 const taskList = document.querySelector('.task-list');
 const completedTaskList = document.querySelector('.completed-task-list');
 
+// Event listener for form submission
 taskForm.addEventListener('submit',(e) =>{
     e.preventDefault();
 
@@ -26,6 +30,7 @@ taskForm.addEventListener('submit',(e) =>{
     displayTasks();
 });
 
+// Function to display tasks
 function displayTasks(){
     taskList.innerHTML = '';
 
@@ -62,6 +67,7 @@ function displayTasks(){
             tasks[index].completed = checkbox.checked;
 
             if(tasks[index].completed){
+                // Move completed task to completedTasks array
                 completedTasks.push(tasks[index]);
                 tasks.splice(index, 1);
                 localStorage.setItem('taskInfo', JSON.stringify(tasks));
@@ -72,6 +78,7 @@ function displayTasks(){
     });
 }
 
+// Function to display completed tasks
 function displayCompletedTasks(){
     completedTaskList.innerHTML = '';
 
@@ -97,6 +104,7 @@ function displayCompletedTasks(){
     localStorage.setItem('completedInfo', JSON.stringify(completedTasks));
 }
 
+// Function to edit a task
 function editTask(index){
     const updatedTitle = prompt('Enter updated title:', tasks[index].title);
     const updatedDescription = prompt('Enter updated description:', tasks[index].description);
@@ -112,18 +120,21 @@ function editTask(index){
     }
 }
 
+// Function to delete a task
 function deleteTask(index){
     tasks.splice(index,1);
     localStorage.setItem('taskInfo', JSON.stringify(tasks));
     displayTasks();
 }
 
+// Function to delete a completed task
 function deleteCompletedTask(index){
     completedTasks.splice(index,1);
     localStorage.setItem('completedInfo', JSON.stringify(completedTasks));
     displayCompletedTasks();
 }
 
+// Initial display of tasks and completed task
 displayTasks();
 displayCompletedTasks();
 

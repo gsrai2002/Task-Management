@@ -19,19 +19,22 @@
         <form class="form">
             <input type="text" class="task-title" placeholder="Task Title" required>
             <input type="text" class="task-description" placeholder="Task Description" required>
-            <input type="date" class="task-due-date" required>
+            <input type="text" class="task-due-date" placeholder="Task Due Date" onfocus="(this.type='date')" onblur="(this.type='text')" required>
             <button type="submit">Add Task</button>
         </form>
         
         <div class="main-content">
+            <!-- Tasks Section -->
             <div class="task-list css-task-list"></div>
 
+            <!-- Completed Tasks Section -->
             <div class="completed-tasks">
                 <h2>Completed Tasks</h2>
                 <div class="completed-task-list"></div>
             </div>
         </div>
     </div>
+
     <script src="task.js"></script>
 </body>
 </html>
